@@ -4,19 +4,28 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/home";
 import ContactUs from "./pages/contactus";
 import AboutUs from "./pages/aboutus";
+import ClassState from "./pages/ClassState";
+import FunctionalState from "./pages/FunctionalState";
+import BasicFormHandling from "./pages/BasicFormHandling";
+
 
 function App() {
   return (
     <>
     <BrowserRouter>
-    <NavigationBar></NavigationBar>
+      <NavigationBar></NavigationBar>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/about" element={<AboutUs></AboutUs>}></Route>
       <Route path="/contact" element={<ContactUs></ContactUs>}></Route>
-      {/* <h1 className="text-warning">Hello</h1> */}
-      </Routes>
-      </BrowserRouter>
+      
+     <Route path="/classState" element={<ClassState/>}></Route>
+     <Route path="/functionalclassState" element={<FunctionalState/>}></Route>
+     <Route path="/basicFormHandling" element={<BasicFormHandling/>}></Route>
+    
+    </Routes>
+    </BrowserRouter>
+      <h1 className="text-warining">Hello World</h1>
     </>
   );
 }

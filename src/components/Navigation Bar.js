@@ -1,6 +1,5 @@
 // import Navbar from 'react-bootstrap/Navbar';
 // import Container from 'react-bootstrap/Container';
-
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 const NavigationBar = () => {
@@ -19,8 +18,24 @@ const NavigationBar = () => {
                     <Link to="/about">about</Link>
                 </Nav.Link>
                 <Nav.Link>
-                    <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
                 </Nav.Link>
+                <NavDropdown title="Hooks" id="basic-nav-dropdown">
+                 <NavDropdown.Item>
+                    <Link to= "/classState">
+                       Use State
+                    </Link>
+                 <NavDropdown.Item>
+                    <Link to= "/functionalclassState">
+                       Use State
+                    </Link>
+                 </NavDropdown.Item>
+                 
+                 </NavDropdown.Item>
+                    <Link to= "/basicFormHandling">
+                        Functional Use State
+                    </Link>
+                 </NavDropdown>
             </Nav>
         </Navbar.Collapse>
       </Container>
